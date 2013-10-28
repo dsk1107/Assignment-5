@@ -25,7 +25,7 @@ function gameStart() {
 		var chara = document.createElement("div");
 		chara.classList.add("charactor");
 		chara.style.position = "absolute";
-		chara.innerHTML = "$" + (Math.floor(Math.random() * 9) + 1);
+		chara.innerHTML = "$" + (Math.floor(Math.random() * 8) + 1);
 		chara.onclick = get;
 		document.getElementById("field").appendChild(chara);
 	}
