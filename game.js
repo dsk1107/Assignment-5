@@ -22,21 +22,21 @@ function gameStart() {
 	count();
 	
 	for(var i = 0; i < 40 * difficulty; i++) {
-		var chara = document.createElement("div");
-		chara.classList.add("charactor");
-		chara.style.position = "absolute";
-		chara.innerHTML = "$" + (Math.floor(Math.random() * 8) + 1);
-		chara.onclick = get;
-		document.getElementById("field").appendChild(chara);
+		var coin = document.createElement("div");
+		coin.classList.add("coin");
+		coin.style.position = "absolute";
+		coin.innerHTML = "$" + (Math.floor(Math.random() * 6) + difficulty);
+		coin.onclick = get;
+		document.getElementById("field").appendChild(coin);
 	}
 	place();
 }
 
 function place() {
-	var charas = document.querySelectorAll('.charactor');
-	for (var i = 0; i < charas.length; i++) {
-		charas[i].style.left = Math.floor(Math.random() * 570) + 'px';
-		charas[i].style.top  = Math.floor(Math.random() * 370) + 'px';
+	var coins = document.querySelectorAll('.coin');
+	for (var i = 0; i < coins.length; i++) {
+		coins[i].style.left = Math.floor(Math.random() * 570) + 'px';
+		coins[i].style.top  = Math.floor(Math.random() * 370) + 'px';
 	}
 }
 

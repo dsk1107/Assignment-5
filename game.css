@@ -28,11 +28,11 @@ h1, #time, #control {
 	background-color: red;
 }
 
-#field, #start, #clear, .charactor {
+#field, #start, #clear, .coin {
 	border-radius: 15px;
 }
 
-.charactor {
+.coin {
 	width: 30px;
 	height: 30px;
 	border: 1px solid black;
@@ -42,7 +42,7 @@ h1, #time, #control {
 	font-size: 24px;
 }
 
-.charactor:hover {
+.coin:hover {
 	cursor: pointer;
 	background-color: red;
 }
