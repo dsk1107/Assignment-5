@@ -1,0 +1,48 @@
+body {
+	background-color: gray;
+}
+
+h1, #time, #control {
+	color: yellow;
+	font-weight: bold;
+	letter-spacing: 0.3em;
+}
+
+#field {
+	width: 600px;
+	height: 400px;
+	border: 5px solid black;
+	position: relative;
+	background-color: white;
+}
+
+#start {
+	color: white;
+	font-weight: bold;
+	background-color: blue;
+}
+
+#clear {
+	color: white;
+	font-weight: bold;
+	background-color: red;
+}
+
+#field, #start, #clear, .charactor {
+	border-radius: 15px;
+}
+
+.charactor {
+	width: 30px;
+	height: 30px;
+	border: 1px solid black;
+	background-color: yellow;
+	font-weight: bold;
+	text-align: center;
+	font-size: 24px;
+}
+
+.charactor:hover {
+	cursor: pointer;
+	background-color: red;
+}
