@@ -1,6 +1,6 @@
 var TOTAL = 0;
 var TIMER = null;
-var COUNT = 30;
+var COUNT = 25;
 var TARGET = null;
 
 window.onload = function() {
@@ -68,9 +68,9 @@ function count() {
 
 function gameOver() {
 	if(TOTAL == TARGET) {
-		alert("Great work! You got $ " + TOTAL + "!");
+		alert("Great work! You got $ " + TOTAL + "! (Target: $" + TARGET + ")" );
 	} else {
-		alert("You lost... You got $ " + TOTAL + ".");
+		alert("You lost... You got $ " + TOTAL + ". (Target: $" + TARGET + ")" );
 	}
 	gameClear();
 }
