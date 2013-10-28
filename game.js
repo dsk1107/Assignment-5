@@ -17,7 +17,7 @@ function gameStart() {
 			difficulty = parseInt(difficulties[i].value);
 		}
 	}
-	TARGET = Math.floor(Math.random() * (100/difficulty)) + 81;  
+	TARGET = Math.floor(Math.random() * (100/difficulty)) + 91;  
 	alert("Collect exactly $" + TARGET + " in 25 seconds");
 	count();
 	
@@ -43,6 +43,7 @@ function place() {
 function gameClear() {
 	document.getElementById("field").innerHTML = "";
 	COUNT = 25;
+	TOTAL = 0;
 	document.getElementById("time").innerHTML = "Time: " + COUNT;
 	document.getElementById("time").style.color = "yellow";
 	clearTimeout(TIMER);
@@ -71,6 +72,5 @@ function gameOver() {
 	} else {
 		alert("You lost... You got $ " + TOTAL + ".");
 	}
-	TOTAL = 0;
 	gameClear();
 }
