@@ -25,7 +25,7 @@ function gameStart() {
 		var coin = document.createElement("div");
 		coin.classList.add("coin");
 		coin.style.position = "absolute";
-		coin.innerHTML = "$" + (Math.floor(Math.random() * 6) + difficulty);
+		coin.innerHTML = "$" + (Math.floor(Math.random() * (difficulty + 5)) + 1);
 		if(difficulty == 2) {
 			coin.style.backgroundColor = "red";
 		}
