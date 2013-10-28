@@ -1,6 +1,6 @@
 var TOTAL = 0;
 var TIMER = null;
-var COUNT = 20;
+var COUNT = 30;
 var TARGET = null;
 
 window.onload = function() {
@@ -17,8 +17,8 @@ function gameStart() {
 			difficulty = parseInt(difficulties[i].value);
 		}
 	}
-	TARGET = Math.floor(Math.random() * (100/difficulty)) + 100;  
-	alert("Collect $" + TARGET + " in 20 seconds");
+	TARGET = Math.floor(Math.random() * (100/difficulty)) + 81;  
+	alert("Collect exactly $" + TARGET + " in 25 seconds");
 	count();
 	
 	for(var i = 0; i < 40 * difficulty; i++) {
@@ -42,7 +42,7 @@ function place() {
 
 function gameClear() {
 	document.getElementById("field").innerHTML = "";
-	COUNT = 20;
+	COUNT = 25;
 	document.getElementById("time").innerHTML = "Time: " + COUNT;
 	document.getElementById("time").style.color = "yellow";
 	clearTimeout(TIMER);
@@ -67,9 +67,9 @@ function count() {
 
 function gameOver() {
 	if(TOTAL == TARGET) {
-		alert("Great work!");
+		alert("Great work! You got $ " + TOTAL + "!");
 	} else {
-		alert("You lost...");
+		alert("You lost... You got $ " + TOTAL + ".");
 	}
 	TOTAL = 0;
 	gameClear();
