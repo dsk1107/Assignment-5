@@ -26,6 +26,9 @@ function gameStart() {
 		coin.classList.add("coin");
 		coin.style.position = "absolute";
 		coin.innerHTML = "$" + (Math.floor(Math.random() * 6) + difficulty);
+		if(difficulty == 2) {
+			coin.style.backgroundColor = "red";
+		}
 		coin.onclick = get;
 		document.getElementById("field").appendChild(coin);
 	}
